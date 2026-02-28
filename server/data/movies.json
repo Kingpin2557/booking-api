@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Dune: Part Two",
+    "synopsis": "Paul Atreides unites with Chani and the Fremen while on a warpath of revenge against the conspirators who destroyed his family.",
+    "posterUrl": "https://images.cinema.com/posters/dune2.jpg",
+    "runtime": 166,
+    "ageRating": "12+",
+    "genres": ["Action", "Adventure", "Sci-Fi"],
+    "releaseDate": "2024-03-01",
+    "language": "English",
+    "hasSubtitles": true
+  },
+  {
+    "id": 2,
+    "title": "Kung Fu Panda 4",
+    "synopsis": "After Po is tapped to become the Spiritual Leader of the Valley of Peace, he needs to find and train a new Dragon Warrior.",
+    "posterUrl": "https://images.cinema.com/posters/kfp4.jpg",
+    "runtime": 94,
+    "ageRating": "AL",
+    "genres": ["Animation", "Action", "Adventure"],
+    "releaseDate": "2024-03-08",
+    "language": "English",
+    "hasSubtitles": true
+  },
+  {
+    "id": 3,
+    "title": "The Zone of Interest",
+    "synopsis": "The commandant of Auschwitz, Rudolf Höss, and his wife Hedwig, strive to build a dream life for their family in a house and garden next to the camp.",
+    "posterUrl": "https://images.cinema.com/posters/zoi.jpg",
+    "runtime": 105,
+    "ageRating": "16+",
+    "genres": ["Drama", "History", "War"],
+    "releaseDate": "2023-12-15",
+    "language": "German",
+    "hasSubtitles": true
+  }
+]

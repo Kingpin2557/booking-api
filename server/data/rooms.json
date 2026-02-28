@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Grand Hall 1",
+    "type": "Standard",
+    "dimensions": { "rows": 4, "cols": 5 },
+    "layout": [
+      [
+        { "id": "A1", "type": "seat", "x": 0, "y": 0 },
+        { "id": "A2", "type": "seat", "x": 0, "y": 1 },
+        { "id": "A3", "type": "seat", "x": 0, "y": 2 },
+        { "id": "A4", "type": "seat", "x": 0, "y": 3 },
+        { "id": "A5", "type": "seat", "x": 0, "y": 4 }
+      ],
+      [
+        { "id": "B1", "type": "seat", "x": 1, "y": 0 },
+        { "id": "B2", "type": "seat", "x": 1, "y": 1 },
+        { "id": "B3", "type": "seat", "x": 1, "y": 2 },
+        { "id": "B4", "type": "seat", "x": 1, "y": 3 },
+        { "id": "B5", "type": "seat", "x": 1, "y": 4 }
+      ]
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Suite A",
+    "type": "VIP",
+    "dimensions": { "rows": 3, "cols": 4 },
+    "layout": [
+      [
+        { "id": "V1", "type": "seat", "x": 0, "y": 0 },
+        { "id": "null", "type": "aisle", "x": 0, "y": 1 },
+        { "id": "null", "type": "aisle", "x": 0, "y": 2 },
+        { "id": "V2", "type": "seat", "x": 0, "y": 3 }
+      ],
+      [
+        { "id": "V3", "type": "seat", "x": 1, "y": 0 },
+        { "id": "V4", "type": "seat", "x": 1, "y": 1 },
+        { "id": "V5", "type": "seat", "x": 1, "y": 2 },
+        { "id": "V6", "type": "seat", "x": 1, "y": 3 }
+      ]
+    ]
+  }
+]
