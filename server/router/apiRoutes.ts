@@ -81,7 +81,7 @@ routes.get("/movie/:id", (req: Request<{ id: number }>, res: Response) => {
 
 routes.post("/movie", (req: Request, res: Response) => {
   try {
-    const { data } = req.body;
+    const data = req.body;
 
     addMovie(data);
     res.status(201).json({ message: "Movie toegevoegd", movie: data });

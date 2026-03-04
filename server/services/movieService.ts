@@ -60,6 +60,7 @@ export const getMovie = (id: number): Movie => {
 };
 
 export const addMovie = (movie: Movie): void => {
+  console.log("Added movie: ", movie);
   const movies = getMovies();
   movies.push(movie);
   fs.writeFileSync(filePath, JSON.stringify(movies, null, 4), "utf-8");
