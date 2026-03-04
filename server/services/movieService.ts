@@ -58,3 +58,9 @@ export const getMovie = (id: number): Movie => {
   const movie = movies.find((movie) => movie.id === id);
   return movie as Movie;
 };
+
+export const addMovie = (movie: Movie): void => {
+  const movies = getMovies();
+  movies.push(movie);
+  fs.writeFileSync(filePath, JSON.stringify(movies, null, 4), "utf-8");
+};

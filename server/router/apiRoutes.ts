@@ -2,7 +2,7 @@ import express, { Request, Response } from "express";
 import path from "path";
 import { getRoom, getRooms } from "../services/roomService";
 import { error } from "console";
-import { getMovie, getMovies } from "../services/movieService";
+import { addMovie, getMovie, getMovies } from "../services/movieService";
 
 const routes = express.Router();
 
@@ -21,7 +21,7 @@ routes.get("/rooms", (_req: Request, res: Response) => {
   }
 });
 
-routes.get("/room/:id", (req, res) => {
+routes.get("/room/:id", (req: Request<{ id: number }>, res: Response) => {
   try {
     const { id } = req.params;
 
@@ -39,7 +39,19 @@ routes.get("/room/:id", (req, res) => {
   }
 });
 
-routes.get("/movies", (req, res) => {
+routes.put("/room/:id", (req: Request<{ id: number }>, res: Response) => {
+  try {
+    const { id } = req.params;
+    const { data } = req.body;
+
+    res.json({ message: "Updated successfully" });
+  } catch (err) {
+    console.error("Error in PUT route", err);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+routes.get("/movies", (_req: Request, res: Response) => {
   try {
     const movies = getMovies();
     res.json(movies);
@@ -49,7 +61,7 @@ routes.get("/movies", (req, res) => {
   }
 });
 
-routes.get("/movie/:id", (req, res) => {
+routes.get("/movie/:id", (req: Request<{ id: number }>, res: Response) => {
   const { id } = req.params;
   try {
     const movie = getMovie(Number(id));
@@ -64,6 +76,18 @@ routes.get("/movie/:id", (req, res) => {
   } catch (err) {
     console.error(`Failed to load movie with id: ${id}`, err);
     res.status(500).json({ error: " Failed to load movie" });
+  }
+});
+
+routes.post("/movie", (req: Request, res: Response) => {
+  try {
+    const { data } = req.body;
+
+    addMovie(data);
+    res.status(201).json({ message: "Student toegevoegd", movie: data });
+  } catch (err) {
+    console.error("Error in POST route", err);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 });
 
