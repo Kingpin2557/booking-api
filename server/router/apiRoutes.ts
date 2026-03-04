@@ -84,7 +84,7 @@ routes.post("/movie", (req: Request, res: Response) => {
     const { data } = req.body;
 
     addMovie(data);
-    res.status(201).json({ message: "Student toegevoegd", movie: data });
+    res.status(201).json({ message: "Movie toegevoegd", movie: data });
   } catch (err) {
     console.error("Error in POST route", err);
     res.status(500).json({ error: "Internal Server Error" });

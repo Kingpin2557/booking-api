@@ -19,9 +19,7 @@
   },
   "homepage": "https://github.com/Kingpin2557/booking-api#readme",
   "dependencies": {
-    "ejs": "^4.0.1",
-    "express": "^5.2.1",
-    "express-ejs-layouts": "^2.5.1"
+    "express": "^5.2.1"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
